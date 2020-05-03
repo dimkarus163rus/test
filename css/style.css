@@ -30,6 +30,7 @@ html, body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: OpenSansRegular, sans-serif;
+  background-color: #e9fAf9;
 }
 
 input, button, textarea {
@@ -69,7 +70,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
 }
-
+@media (max-width: 767px){
+  .header__body {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column!important;
+  }
+  .header__title{
+    margin-bottom: 10px;
+  }
+  .content__sidebar {
+    display: none;
+  }
+  .container{
+    padding: 5px 10px 5px 5px;
+  }
+}
 /*NULL*/
 @font-face {
   font-family: "OpenSansBold";
@@ -87,44 +103,39 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-style: normal;
 }
-body{
-  background-color: #FAFAFA;
-}
 .wrapper{
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 header{
   background: #62B4DA;
 }
 .container{
-	width: 980px;
+	max-width: 980px;
 	margin: 0 auto;
 }
 .header__body {
   display: flex;
   flex-direction: row;
-  padding: 5px 0px;
+  padding: 10px 0px;
 }
 .header__title {
-  width:100%;
   display: flex;
-  flex-direction: row;
-  padding: 0 5px;
 }
 .header__title img{
     width: 30px;
     height: 30px;
     flex: 0 0 30px;
 }
-.header__title h1{
+.header__title h2{
   font-family: OpenSansBold; 
   font-size: 30px;
 }
 
 .header__nav {
   flex: 0 0 auto;
- /* margin-top: 10px;*/
 }
 .menu, .submenu{
     display:flex;
@@ -162,4 +173,46 @@ header{
 }
 .submenu li:hover .subsubmenu{
   visibility: visible;
+}
+.content{
+  height: 100%;
+  flex: 1 1 auto;
+}
+.content h2{
+  margin: 20px 0px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  padding: 20px 0px;
+  font-size: 40px;
+  text-align: center;
+}
+.content h3{
+  font-family: OpenSansBold;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+}
+.content__body{
+  display: flex;
+  flex-direction: row;
+}
+.content__text {
+  max-width: 800px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: justify;
+  flex: 1 1 auto;
+}
+.content__sidebar {
+  max-width: 200px;
+  margin-left: 20px;
+  padding: 0px 10px;
+  border-left: 1px solid #666;
+}
+footer{
+}
+.foot{
+  width:100%;
+  height: 30px;
+  background-color: #333;
 }
