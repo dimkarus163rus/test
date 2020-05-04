@@ -175,6 +175,9 @@ header{
   color: #fafafa;
 
 }
+.menu a:hover{
+  background: #F50;
+}
 .submenu{
   flex-direction: column;
   position: absolute;
