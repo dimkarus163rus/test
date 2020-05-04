@@ -76,20 +76,19 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     flex-direction: column!important;
-    min-height: 20%;
     padding: 0px 0px 0px 0px!important;
   }
   .header__title{
     margin-bottom: 10px;
   }
   .content__body{
-    position: relative;
+    
   }
   .content__sidebar {
     display: none;
   }
   .container{
-    padding: 5px 10px 5px 5px;
+    padding: 5px 5px 0px 10px;
   }
   .menu li:active .submenu{
     visibility: visible;
@@ -123,8 +122,8 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 header{
-  min-height: 150px;
-  background: #62B4DA;
+  min-height: 200px;
+  background: url(../img/zagolovok.jpg);
 }
 .container{
 	max-width: 980px;
@@ -135,19 +134,23 @@ header{
   flex-direction: row;
   justify-content: center;
   padding: 50px 0px;
+
 }
 .header__title {
+  background-color: #E40;
   display: flex;
   flex: 1 1 auto;
 }
 .header__title img{
     width: 50px;
     height: 50px;
+    margin-right: 10px;
     flex: 0 0 30px;
 }
 .header__title h2{
   font-family: OpenSansBold; 
   font-size: 40px;
+  line-height: 50px;
 }
 
 .header__nav {
@@ -159,22 +162,31 @@ header{
     padding-left: 0;
     position: relative;
 }
-.menu>li{border-left: 1px solid #111;}
-.menu>li:last-child{border-right: 1px solid #111;}
+.menu li{
+    background: #E40;
+}
+.menu>li{border-left: 1px solid #F50;}
+.menu>li:last-child{border-right: 1px solid #F50;}
 .menu a{
   display: block;
   padding: 5px;
   font-size: 20px;
-  color: #111;
-  background: #62B4DA;
+  line-height: 40px;
+  color: #fafafa;
+
 }
 .submenu{
   flex-direction: column;
   position: absolute;
   visibility: hidden;
+  border-top: 1px solid transparent;
+}
+.submenu li a{
+  line-height: 20px;
+  font-size: 20px;
 }
 .menu .activated{
-	background-color: #319ECD;
+	background-color: #333;
   visibility: visible;
 }
 .subsubmenu{
@@ -206,7 +218,9 @@ header{
   font-family: OpenSansBold;
   font-size: 16px;
   margin-bottom: 10px;
-
+}
+.content__title{
+  background: #f50;
 }
 .content__body{
   display: flex;
@@ -220,9 +234,10 @@ header{
   flex: 1 1 auto;
 }
 .content__sidebar {
+  background-color: #F50;
   max-width: 200px;
   margin-left: 20px;
-  padding: 0px 10px;
+  padding: 10px 10px;
   border-left: 1px solid #666;
 }
 footer{
@@ -232,4 +247,21 @@ footer{
   width:100%;
   height: 30px;
   background-color: #333;
+}
+
+.bar {
+  margin-top: 10px;
+  background-color: #F50;
+}
+.bar ul li a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fafafa;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+}
+.bar ul li a:hover{
+  background-color: #E40;
 }
